@@ -2037,7 +2037,7 @@ function main() {
         if (adapter.config.allowStates !== undefined) {
             adapter.config.allowStates = true;
         }
-        adapter.config.answerTimeoutSec = parseInt(adapter.config.answerTimeoutSec, 10) || 60;
+        adapter.config.answerTimeoutSec = parseInt(adapter.config.answerTimeoutSec, 10) || 1200;
         adapter.config.answerTimeoutSec *= 1000;
         adapter.config.rememberUsers = adapter.config.rememberUsers === 'true' || adapter.config.rememberUsers === true;
 
