@@ -2038,7 +2038,9 @@ function main() {
             adapter.config.allowStates = true;
         }
         adapter.config.answerTimeoutSec = parseInt(adapter.config.answerTimeoutSec, 10) || 1200;
+        adapter.log.debug(`Configure answer timeout: ${adapter.config.answerTimeoutSec} seconds`);
         adapter.config.answerTimeoutSec *= 1000;
+
         adapter.config.rememberUsers = adapter.config.rememberUsers === 'true' || adapter.config.rememberUsers === true;
 
         adapter.getForeignObject('system.config', (err, obj) => {
